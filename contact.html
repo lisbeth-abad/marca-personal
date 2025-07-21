@@ -146,11 +146,10 @@
       statusDiv.className = 'status-message';
 
       emailjs.sendForm('service_khukbld', 'template_43y7f37', this)
-        .then(() => {
-          statusDiv.textContent = '✅ ¡Mensaje enviado con éxito!';
-          statusDiv.className = 'status-message success';
-          form.reset();
-        }, (error) => {
+       .then(() => {
+  window.location.href = "gracias.html";
+})
+ (error) => {
           console.error('Error:', error);
           statusDiv.textContent = '❌ Error al enviar. Intenta de nuevo.';
           statusDiv.className = 'status-message error';
